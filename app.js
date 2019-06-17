@@ -29,14 +29,14 @@ app.get('/kittens', (req, res, next) => {
       `);
 });
 
-app.get('/puppies', (req, res, next) => {
+app.get('/:stuff', (req, res, next) => {
   res.send(`
           <html>
            <head>
              <title>My site</title>
            </head>
            <body>
-             <h1>You typed puppies</h1>
+             <h1>You typed ${req.params.stuff}</h1>
            </body>
           </html>
         `);
